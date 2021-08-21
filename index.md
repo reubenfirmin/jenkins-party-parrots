@@ -16,6 +16,10 @@ https://reubenfirmin.github.io/jenkins-party-parrots/src/jenkins-party-parrots.c
 
 ----
 
+# Icons
+
+The build icons will be replaced with the icons below (sized appropriately.)
+
 | Status | Icon |
 | ------ | ---- |
 | Clean | ![img](https://cdn.jsdelivr.net/gh/reubenfirmin/jenkins-party-parrots/images/clean-build.png) | 
