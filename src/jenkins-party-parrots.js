@@ -23,9 +23,12 @@ function updateBuildIcons() {
     newIcon.classList.add("parrot-build-icon");
     svgElement.parentNode.replaceChild(newIcon, svgElement);
   }
-  for (const svgElement of document.getElementsByClassName("build-status-icon__outer")) { // the rings
-    svgElement.remove();
-  }
+  setTimeout(function() { // remove the rings. they seem to be rendered after the fact, hence the timeout
+    for (const svgElement of document.getElementsByClassName("build-status-icon__outer")) { 
+      svgElement.remove();
+    }
+  }, 300);
+  
 }
 
 window.addEventListener('load', updateBuildIcons, false);
