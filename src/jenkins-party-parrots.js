@@ -23,6 +23,13 @@ function updateBuildIcons() {
     newIcon.classList.add("parrot-build-icon");
     svgElement.parentNode.replaceChild(newIcon, svgElement);
   }
+  for (const svgElement of document.getElementsByClassName("icon-red-anime")) { // previously broken build in progress
+    const newIcon = document.createElement('img');
+    newIcon.src = "https://cdn.jsdelivr.net/gh/reubenfirmin/jenkins-party-parrots/images/broken-building.gif";
+    newIcon.classList.add("parrot-build-icon");
+    svgElement.parentNode.replaceChild(newIcon, svgElement);
+  }
+  
   setTimeout(function() { // remove the rings. they seem to be rendered after the fact, hence the timeout
     for (const svgElement of document.getElementsByClassName("build-status-icon__outer")) { 
       svgElement.remove();
