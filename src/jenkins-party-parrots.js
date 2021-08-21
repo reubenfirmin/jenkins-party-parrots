@@ -1,49 +1,33 @@
 function updateBuildIcons() {
-  for (const svgElement of document.getElementsByClassName("icon-blue")) { // clean build
-    const newIcon = document.createElement('img');
-    newIcon.src = "https://cdn.jsdelivr.net/gh/reubenfirmin/jenkins-party-parrots/images/clean-build.png";
-    newIcon.classList.add("parrot-build-icon");
-    svgElement.parentNode.replaceChild(newIcon, svgElement);
-  }
-  for (const svgElement of document.getElementsByClassName("icon-red")) { // broken build
-    const newIcon = document.createElement('img');
-    newIcon.src = "https://cdn.jsdelivr.net/gh/reubenfirmin/jenkins-party-parrots/images/broken-build.png";
-    newIcon.classList.add("parrot-build-icon");
-    svgElement.parentNode.replaceChild(newIcon, svgElement);
-  }
-  for (const svgElement of document.getElementsByClassName("icon-nobuilt")) { // build with no history
-    const newIcon = document.createElement('img');
-    newIcon.src = "https://cdn.jsdelivr.net/gh/reubenfirmin/jenkins-party-parrots/images/no-build.png";
-    newIcon.classList.add("parrot-build-icon");
-    svgElement.parentNode.replaceChild(newIcon, svgElement);
-  }
-  for (const svgElement of document.getElementsByClassName("icon-aborted")) { // build that was stopped
-    const newIcon = document.createElement('img');
-    newIcon.src = "https://cdn.jsdelivr.net/gh/reubenfirmin/jenkins-party-parrots/images/incomplete-build.png";
-    newIcon.classList.add("parrot-build-icon");
-    svgElement.parentNode.replaceChild(newIcon, svgElement);
-  }
-  for (const svgElement of document.getElementsByClassName("icon-blue-anime")) { // build in progress
-    const newIcon = document.createElement('img');
-    newIcon.src = "https://cdn.jsdelivr.net/gh/reubenfirmin/jenkins-party-parrots/images/partyparrot.gif";
-    newIcon.classList.add("parrot-build-icon");
-    svgElement.parentNode.replaceChild(newIcon, svgElement);
-  }
-  for (const svgElement of document.getElementsByClassName("icon-red-anime")) { // previously broken build in progress
-    const newIcon = document.createElement('img');
-    newIcon.src = "https://cdn.jsdelivr.net/gh/reubenfirmin/jenkins-party-parrots/images/broken-building.gif";
-    newIcon.classList.add("parrot-build-icon");
-    svgElement.parentNode.replaceChild(newIcon, svgElement);
-  }
+  icon("icon-blue", "clean-build.png", "Clean Build");
+  icon("icon-red", "broken-build.png", "Broken Build");
+  icon("icon-nobuilt", "no-build.png", "No Build History");
+  icon("icon-aborted", "incomplete-build.png", "Incomplete Build");
+  icon("icon-blue-anime", "partyparrot.gif", "Build In Progress (Prev Clean)");
+  icon("icon-red-anime", "broken-building.gif", "Build In Progress (Prev Broken)");
   
-  // remove the rings. they seem to be rendered after the fact, hence the timeout
-  for (const svgElement of document.getElementsByClassName("build-status-icon__outer")) { 
-      svgElement.remove();
+  // remove the rings. somehow we're not getting all of them
+  for (let i = 0; i < 5; i++) {
+    for (const svgElement of document.getElementsByClassName("build-status-icon__outer")) { 
+        svgElement.remove();
+    }
   }
-  for (const svgElement of document.getElementsByClassName("build-status-icon__outer")) { 
-      svgElement.remove();
-  }
+  setTimeout({
+    for (const svgElement of document.getElementsByClassName("build-status-icon__outer")) { 
+        svgElement.remove();
+    }
+  }, 500);
   
+}
+
+fun icon(origClassName, newIcon, description) {
+    for (const svgElement of document.getElementsByClassName(origClassName)) {
+      const newIcon = document.createElement('img');
+      newIcon.src = "https://cdn.jsdelivr.net/gh/reubenfirmin/jenkins-party-parrots/images/" + newIcon;
+      newIcon.classList.add("parrot-build-icon");
+      newIcon.alt = description;
+      svgElement.parentNode.replaceChild(newIcon, svgElement);
+    }
 }
 
 window.addEventListener('load', updateBuildIcons, false);
