@@ -20,7 +20,8 @@ https://reubenfirmin.github.io/jenkins-party-parrots/src/jenkins-party-parrots.c
 | ------ | ---- |
 | Clean | ![img](https://cdn.jsdelivr.net/gh/reubenfirmin/jenkins-party-parrots/images/clean-build.png) | 
 | Broken | ![img](https://cdn.jsdelivr.net/gh/reubenfirmin/jenkins-party-parrots/images/broken-build.png) | 
-| Stopped | ![img](https://cdn.jsdelivr.net/gh/reubenfirmin/jenkins-party-parrots/images/no-build.png) | 
+| Incomplete | ![img](https://cdn.jsdelivr.net/gh/reubenfirmin/jenkins-party-parrots/images/incomplete-build.png) | 
+| No Build History | ![img](https://cdn.jsdelivr.net/gh/reubenfirmin/jenkins-party-parrots/images/no-build.png) | 
 | Building, Previously Clean | ![img](https://cdn.jsdelivr.net/gh/reubenfirmin/jenkins-party-parrots/images/partyparrot.gif) | 
 | Building, Previously Broken | ![img](https://cdn.jsdelivr.net/gh/reubenfirmin/jenkins-party-parrots/images/broken-building.gif) | 
 
