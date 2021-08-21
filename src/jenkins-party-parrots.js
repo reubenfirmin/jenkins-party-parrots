@@ -21,10 +21,10 @@ function updateBuildIcons() {
   
 }
 
-function icon(origClassName, newIcon, description) {
+function icon(origClassName, iconFile, description) {
     for (const svgElement of document.getElementsByClassName(origClassName)) {
       const newIcon = document.createElement('img');
-      newIcon.src = "https://cdn.jsdelivr.net/gh/reubenfirmin/jenkins-party-parrots/images/" + newIcon;
+      newIcon.src = "https://cdn.jsdelivr.net/gh/reubenfirmin/jenkins-party-parrots/images/" + iconFile;
       newIcon.classList.add("parrot-build-icon");
       newIcon.alt = description;
       svgElement.parentNode.replaceChild(newIcon, svgElement);
