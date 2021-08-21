@@ -6,5 +6,10 @@ To add the theme go to the "Manage Jenkins -> Configure System" page and under t
 JS URL:
 
 ```text
-https://cdn.jsdelivr.net/gh/reubenfirmin/jenkins-party-parrots/src/jenkins-party-parrots.js
+https://raw.githubusercontent.com/reubenfirmin/jenkins-party-parrots/main/src/jenkins-party-parrots.js
+```
+
+CSS URL:
+```text
+https://raw.githubusercontent.com/reubenfirmin/jenkins-party-parrots/main/src/jenkins-party-parrots.css
 ```
