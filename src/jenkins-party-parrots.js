@@ -11,7 +11,7 @@ function updateBuildIcons() {
     for (const svgElement of document.getElementsByClassName("build-status-icon__outer")) { 
         svgElement.remove();
     }
-  }
+  };
   setTimeout(() => {
     for (const svgElement of document.getElementsByClassName("build-status-icon__outer")) { 
         svgElement.remove();
