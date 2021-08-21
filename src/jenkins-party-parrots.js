@@ -21,7 +21,7 @@ function updateBuildIcons() {
   
 }
 
-fun icon(origClassName, newIcon, description) {
+function icon(origClassName, newIcon, description) {
     for (const svgElement of document.getElementsByClassName(origClassName)) {
       const newIcon = document.createElement('img');
       newIcon.src = "https://cdn.jsdelivr.net/gh/reubenfirmin/jenkins-party-parrots/images/" + newIcon;
