@@ -1,4 +1,4 @@
-function updateWeatherIcons() {
+function updateBuildIcons() {
   for (const svgElement of document.getElementsByClassName("icon-blue")) { // clean build
     for (const useElement of svgElement.getElementsByTagName("use")) {
       useElement.href.baseVal = "https://cdn.jsdelivr.net/gh/reubenfirmin/jenkins-party-parrots/src/jenkins-party-parrots-icons.css#clean-build";
@@ -21,4 +21,4 @@ function updateWeatherIcons() {
   }
 }
 
-window.addEventListener('load', updateWeatherIcons, false);
+window.addEventListener('load', updateBuildIcons, false);
