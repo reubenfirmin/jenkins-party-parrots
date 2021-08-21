@@ -1,6 +1,6 @@
 # jenkins-party-parrots
 
-This theme for Jenkins will replace the default build icons with party parrots.  It requires the [Simple Theme Plugin](https://plugins.jenkins.io/simple-theme-plugin/).
+This theme for Jenkins will replace the default build icons with party parrots (compatible with Jenkins installs that use SVG icons by default).  It requires the [Simple Theme Plugin](https://plugins.jenkins.io/simple-theme-plugin/).
 
 To add the theme go to the "Manage Jenkins -> Configure System" page and under the "Theme elements" section add the following:<br/>
 
