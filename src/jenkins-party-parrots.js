@@ -4,6 +4,7 @@ function updateBuildIcons() {
   icon("icon-nobuilt", "no-build.png", "No Build History");
   icon("icon-aborted", "incomplete-build.png", "Incomplete Build");
   icon("icon-blue-anime", "partyparrot.gif", "Build In Progress (Prev Clean)");
+  icon("icon-yellow-anime", "partyparrot.gif", "Build In Progress");
   icon("icon-red-anime", "broken-building.gif", "Build In Progress (Prev Broken)");
   
   // remove the rings. somehow we're not getting all of them
