@@ -17,6 +17,12 @@ function updateBuildIcons() {
     newIcon.classList.add("parrot-build-icon");
     svgElement.parentNode.replaceChild(newIcon, svgElement);
   }
+  for (const svgElement of document.getElementsByClassName("icon-aborted")) { // build that was stopped
+    const newIcon = document.createElement('img');
+    newIcon.src = "https://cdn.jsdelivr.net/gh/reubenfirmin/jenkins-party-parrots/images/incomplete-build.png";
+    newIcon.classList.add("parrot-build-icon");
+    svgElement.parentNode.replaceChild(newIcon, svgElement);
+  }
   for (const svgElement of document.getElementsByClassName("icon-blue-anime")) { // build in progress
     const newIcon = document.createElement('img');
     newIcon.src = "https://cdn.jsdelivr.net/gh/reubenfirmin/jenkins-party-parrots/images/partyparrot.gif";
@@ -30,11 +36,13 @@ function updateBuildIcons() {
     svgElement.parentNode.replaceChild(newIcon, svgElement);
   }
   
-  setTimeout(function() { // remove the rings. they seem to be rendered after the fact, hence the timeout
-    for (const svgElement of document.getElementsByClassName("build-status-icon__outer")) { 
+  // remove the rings. they seem to be rendered after the fact, hence the timeout
+  for (const svgElement of document.getElementsByClassName("build-status-icon__outer")) { 
       svgElement.remove();
-    }
-  }, 300);
+  }
+  for (const svgElement of document.getElementsByClassName("build-status-icon__outer")) { 
+      svgElement.remove();
+  }
   
 }
 
