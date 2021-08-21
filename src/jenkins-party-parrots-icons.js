@@ -16,7 +16,7 @@ function updateBuildIcons() {
   }
   for (const svgElement of document.getElementsByClassName("icon-blue-anime")) { // build in progress
     const newIcon = document.createElement('img');
-    newIcon.src = "https://cdn.jsdelivr.net/gh/reubenfirmin/jenkins-party-parrots/images/blue-anime.gif";
+    newIcon.src = "https://cdn.jsdelivr.net/gh/reubenfirmin/jenkins-party-parrots/images/blue_anime.gif";
     svgElement.parentNode.replaceChild(newIcon, svgElement);
   }
 }
