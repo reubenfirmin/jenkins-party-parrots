@@ -1,10 +1,13 @@
 function updateBuildIcons() {
   for (const svgElement of document.getElementsByClassName("icon-blue")) { // clean build
-    for (const useElement of svgElement.getElementsByTagName("use")) {
+    const newIcon = document.createElement('img');
+    newIcon.src = "https://cdn.jsdelivr.net/gh/reubenfirmin/jenkins-party-parrots/images/blue.png";
+    svgElement.parentNode.replaceChild(newIcon, svgElement);
+    /*for (const useElement of svgElement.getElementsByTagName("use")) {
       useElement.href.baseVal = "https://cdn.jsdelivr.net/gh/reubenfirmin/jenkins-party-parrots/src/jenkins-party-parrots-icons.css#clean-build";
-    }
+    }*/
   }
-  for (const svgElement of document.getElementsByClassName("icon-red")) { // broken build
+  /*for (const svgElement of document.getElementsByClassName("icon-red")) { // broken build
     for (const useElement of svgElement.getElementsByTagName("use")) {
       useElement.href.baseVal = "https://cdn.jsdelivr.net/gh/reubenfirmin/jenkins-party-parrots/src/jenkins-party-parrots-icons.css#broken-build";
     }
@@ -18,7 +21,7 @@ function updateBuildIcons() {
     for (const useElement of svgElement.getElementsByTagName("use")) {
       useElement.href.baseVal = "https://cdn.jsdelivr.net/gh/reubenfirmin/jenkins-party-parrots-icons/src/jenkins-party-parrots-icons.css#build-in-progress";
     }
-  }
+  }*/
 }
 
 window.addEventListener('load', updateBuildIcons, false);
